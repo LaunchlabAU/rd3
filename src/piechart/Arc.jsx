@@ -19,6 +19,7 @@ module.exports = React.createClass({
     sectorBorderColor: React.PropTypes.string,
     showInnerLabels: React.PropTypes.bool,
     showOuterLabels: React.PropTypes.bool,
+    labelLineStrokeWidth: React.PropTypes.number
   },
 
   getDefaultProps() {
@@ -27,6 +28,7 @@ module.exports = React.createClass({
       valueTextFill: 'white',
       showInnerLabels: true,
       showOuterLabels: true,
+      labelLineStrokeWidth: 2
     };
   },
 
@@ -69,7 +71,7 @@ module.exports = React.createClass({
           transform={rotate}
           style={{
             fill: props.labelTextFill,
-            strokeWidth: 2,
+            strokeWidth: props.labelLineStrokeWidth,
           }}
         >
         </line>
